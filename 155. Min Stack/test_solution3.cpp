@@ -25,7 +25,7 @@ TEST_CASE("LeetCode") {
 	min_stack.getMin();
 }
 
-/*
+
 TEST_CASE("Push onto stack") {
 	MinStack min_stack;
 	min_stack.push(-2);
@@ -39,8 +39,3 @@ TEST_CASE("Push onto stack") {
 	REQUIRE(min_stack.top() == 0);
 	REQUIRE(min_stack.getMin() == -2);
 }
-*/
-/*
-["MinStack","push","push","push","top","pop","getMin","pop","getMin","pop","push","top","getMin","push","top","getMin","pop","getMin"]
-[[],[2147483646],[2147483646],[2147483647],[],[],[],[],[],[],[2147483647],[],[],[-2147483648],[],[],[],[]]
-*/
