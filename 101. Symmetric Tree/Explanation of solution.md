@@ -1,0 +1,4 @@
+# Solution 1
+My solution uses a boolean flag to represent the symmetry of the binary tree. The solution works by assuming the tree is symmetric (`true`) and then passing each pair of left and right nodes through a series of tests, which if failed, set the flag to `false`. If all tests are passed the solution remains `true` and the tree is symmetric.
+
+The solution starts off by checking the root children for symmetry. If there are two children then the recursive function `currNodeOK` is called passing the left and right children as arguments. This function first checks for value equality between the passed nodes. It then checks for unsymmetric children of the two passed nodes (e.g. a left child of the left node but no right child of the right node). It then recursively calls itself using the two outer/inner children of the current pair of nodes. If all calls pass without the symmetry flag becoming false, the binary tree is symmetric.
