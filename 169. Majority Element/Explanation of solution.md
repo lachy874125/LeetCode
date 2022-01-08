@@ -12,3 +12,6 @@ Space complexity: O(1) - no extra data structures are required.
 
 # Solution 3
 This solution uses a clever algorithm called Boyer-Moore Voting Algorithm. I did not think of this solution. At a high level, it uses a voting system whereby each element votes for itself, with the majority element obviously winning. The algorithm starts by guessing the first element is the majority. It then iterates over the array and keeps a sum, where it adds 1 if it encounters the guessed element `guess`, or subtracts 1 if it doesn't. When the `sum == 0`, we 'discard' the beginning of the array up to the current element. This works because we are ignoring an equal amount of majority and non-majority elements. The guessed element is then updated to the next encountered element. The algorithm will always eventually choose and hold the correct majority element and will finish iterating with the correct guess.
+
+Time complexity: O(n) - the array is iterated through once
+Space complexity: O(1) - the number of variables is constant regardless of size
