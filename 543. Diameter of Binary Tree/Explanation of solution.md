@@ -1,0 +1,6 @@
+# Solution 1
+For any given node, the length of the longest path travelling through it is the sum of the distances to the deepest nodes in the left and right directions. Therefore, by iterating through each node, calculating the longest path through that node, and keeping the maximum, we can determine the diameter of the binary tree. The function `diameterOfCurrNode()` calculates the longest path travelling through a node using the `deepestNode` function. `diameterOfBinaryTree()` is a recursive decision-making function that calls itself and `diameterOfCurrNode()` when necessary.
+
+I noticed I could make a significant optimisation. Define the 'diameter node' as the node from which the longest path is calculated (there is only one for each tree). If a node is not the root and has < 2 children, it cannot be the diameter node. Knowing this, we can skip the longest path calculation `diameterOfCurrNode()` for all such nodes and simply call the recursive function on its child if it has one.
+
+The `root_done` flag indicates if the `root` node has been handled already, as it is the only node for which the above optimisation does not apply to.
