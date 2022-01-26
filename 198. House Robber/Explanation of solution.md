@@ -1,0 +1,5 @@
+# Solution 1
+This algorithm came to me after attempting a few examples by hand and realising a significant fact: at any given house, the robber has two options to maximise their profit, move 2 houses forward or 3. If the robber would move 4 houses away, they would miss the profit from moving 2 houses away first. Therefore, we can use dynamic programming to solve this problem. At each house, the robber calculates the potential profit of moving to that house from 2 houses back or 3 and records that house's profit as equal to the house's cash + the max profit from house 2 or 3 back. If we iterate though every house and keep a global max, we will eventually obtain the highest profit.
+
+Time complexity: O(n) - the vector is iterated through once
+Space complexity: O(1) - one variable is used to hold the global max and all accumulating profits are stored in the original vector
