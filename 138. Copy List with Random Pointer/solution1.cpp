@@ -15,7 +15,7 @@ Node* Solution::copyRandomList(Node* head) {
 
 	while (original_node->next) {
 		// Next pointer
-		// If next points to a future Node, point to it, otherwise create a new Node
+		// If next points to a created Node, point to it, otherwise create a new Node
 		auto created_node_search{created_nodes.find(original_node->next)};
 		if (created_node_search != created_nodes.end()) {
 			copy_node->next = created_node_search->second;
@@ -25,7 +25,7 @@ Node* Solution::copyRandomList(Node* head) {
 		}
 
 		// Random pointer
-		// If random points to a past node, point to it, otherwise create a new Node and store it in future nodes
+		// If random points to a created node, point to it, otherwise create a new Node
 		if (original_node->random != nullptr) {
 			created_node_search = created_nodes.find(original_node->random);
 			if (created_node_search != created_nodes.end()) {
