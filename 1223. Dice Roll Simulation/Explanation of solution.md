@@ -1,6 +1,8 @@
 # Solution 1
 The algorithm takes a dynamic programming approach using a 2D vector. The rows, y, represent the current roll of the dice (e.g. roll #1) and the columns, x, represent the face that the dice landed on. The cell value represents the possible number of permutations given we have rolled an x on the y'th dice roll.
 
+![image](https://user-images.githubusercontent.com/91536829/155819652-b7955a8b-847b-446b-8633-be97a9c2508b.png)
+
 Suppose `rollMax = {1,1,1,2,2,3}`
 - For the first roll, there is only 1 way to possibly land on each dice face and the total number of rolls is 6
 - For the 2nd roll:
