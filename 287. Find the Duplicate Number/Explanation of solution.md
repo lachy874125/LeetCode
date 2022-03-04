@@ -10,6 +10,8 @@ Space complexity: O(1) - constant extra space is used
 # Solution 2
 This solution treats the input vector as a representation of a linked list. E.g. for the vector `[1,3,4,2,6,2,5]`, the `1` is a node that points to position 1, which is a `3` node that points to position 3 and so on. This is visualised in the diagram below. Since there is guaranteed to be a duplicate number, there is guaranteed to be a cycle. The first element encountered in the cycle is the duplicate number. The problem can then be thought of as how do we find the first element in the cycle?
 
+![image](https://user-images.githubusercontent.com/91536829/156753886-fafe6333-0967-4e6c-a880-17c6d79f1b99.png)
+
 To do this, we use two "pointers", one travels slow (one node at a time) and the other travels fast (two nodes at a time). If we let them run until they meet then the fast one has travelled twice the distance as the first:
 `2d(slow) = d(fast)`
 If we let `x` represent the number of nodes until the first cycle node, and `y` represent the number of nodes from the first cycle node to the point of intersection (as shown in the diagram) then the equation becomes:
